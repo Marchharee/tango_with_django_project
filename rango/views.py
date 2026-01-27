@@ -2,7 +2,8 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 def about(request):
-    return HttpResponse("Rango says here is the about page.<a href='/rango/'>Index</a>.")
+    context_dict2={'boldmessage':'Rango says here is the about page.'}
+    return render(request,'rango/about.html',context=context_dict2)
 def index(request):
 # Construct a dictionary to pass to the template engine as its context.
 # Note the key boldmessage matches to {{ boldmessage }} in the template!
