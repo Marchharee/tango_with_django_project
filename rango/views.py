@@ -1,6 +1,8 @@
 from django.shortcuts import render
 
 from django.http import HttpResponse
+def about(request):
+    return HttpResponse("Rango says here is the about page.<a href='/rango/'>Index</a>.")
 def index(request):
 # Construct a dictionary to pass to the template engine as its context.
 # Note the key boldmessage matches to {{ boldmessage }} in the template!
